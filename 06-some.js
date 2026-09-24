@@ -1,0 +1,53 @@
+
+
+
+console.log("--- EXEMPLOS COM some() ---\n");
+
+// Exemplo 1 (Básico): Verificar existência de número negativo
+
+console.log("--- Exemplo 1: Há número negativo? (Básico) ---")
+
+const temperaturas = [23, 19, 28, -2, 31];
+
+const temCongelamento = temperaturas.some((temp) => temp < 0);
+
+console.log("Temperaturas:", temperaturas);
+console.log("Houve temperatura abaixo de zero?", temCongelamento);
+console.log("\n");
+
+// Exemplo 2 (Intermediário): Checar pendência cadastral de usuários
+
+console.log("--- Exemplo 2: Há usuários inativos? (Intermediário) ---");
+
+const usuarios = [
+    { id: 1, nome: "Lucas", ativo: true },
+    { id: 2, nome: "Mariana", ativo: false },
+    { id: 3, nome: "Carlos", ativo: true }
+];
+
+const haInativos = usuarios.some((u) => !u.ativo);
+
+console.log("Existe algum usuário inativo?", haInativos);
+console.log("\n");
+
+// Exemplo 3 (Back-End Real): Alerta de reposição d estoque
+
+console.log("--- Exemplo 3: Alerta de estoque esgotado (Back-End Real) ---");
+
+const inventario = [
+    { id: 101, nome: "Monitor 24pol", estoque: 6 },
+    { id: 102, nome: "Cabo HDMI 2.0", estoque: 0 },
+    { id: 103, nome: "Webcam HD", estoque: 15 }
+];
+
+function checar(produtos) {
+    const temEsgotado = produtos.some((p) => p.estoque === 0);
+
+    if (temEsgotado) {
+        return "Alerta: Há produtos esgotados no armazém. Acionar compras!";
+    }
+
+    return "Ok: Todos os produtos possuem esqtoque.";
+}
+
+console.log(checar(inventario));
