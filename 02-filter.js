@@ -41,7 +41,7 @@ console.log("=== Exemplo 3: Endpoint de vitrine com produtos em estoque (Back-En
 const catalogo = [
     { id: 101, nome: "Teclado Mecânico", categoria: "Periféricos", preco: 250.0, estoque: 12, ativo: true },
     { id: 102, nome: "Mouse Gamer", categoria: "Periféricos", preco: 120.0, estoque: 0, ativo: true },
-    { id: 103, nome: "Monitor 144Hz", categoria: "Monitores", preco },
+    { id: 103, nome: "Monitor 144Hz", categoria: "Monitores", preco: 100.0, estoque: 10, ativo: true },
     { id: 104, nome: "Headset USB", categoria: "Periféricos", preco: 180.0, estoque: 8, ativo: true },
     { id: 105, nome: "Cabo HDMI", categoria: "Acessórios", preco: 30.0, estoque: 0, ativo: false }
 ];
